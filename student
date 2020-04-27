@@ -1,0 +1,37 @@
+package 报告4;
+
+class Student{
+	String name;
+	int 	age;
+	public Student() {
+		
+	}
+	public Student(String name,int age){
+		this.name=name;
+		this.age=age;
+	}
+	public void show() {
+		System.out.println("学生的姓名："+ name +",年龄："+ age);
+	}
+}
+
+class Undergraduate extends Student{
+	String degree;
+	public Undergraduate(String name,int age,String degree) {
+		this.name=name;
+		this.age=age;
+		this.degree=degree;
+	}
+	public void show() {
+		System.out.println("学生的姓名："+ name +",年龄："+ age +",学位："+degree);
+	}
+}
+
+public class Test01 {
+	public static void main(String[] args) {
+		Student p1 = new Student("小明",19);
+		Undergraduate p2 = new Undergraduate("小红",20,"本科生");
+		p1.show();
+		p2.show();
+	}
+}
